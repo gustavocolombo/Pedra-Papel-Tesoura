@@ -1,4 +1,6 @@
-package br.com.ufc.es.pds.model;	
+package br.com.ufc.es.pds.model;
+
+import java.util.Random;
 
 public class PedraPapelTesoura {
 	private int palpite;
@@ -33,21 +35,29 @@ public class PedraPapelTesoura {
 		this.palpite = palpite;
 	}
 	
-	public void verificaVencedor(int palpiteJogador, int palpiteMaquina) {
-		if(	palpiteJogador == 2 && palpiteMaquina == 4 || 
-			palpiteJogador == 3 && palpiteMaquina == 2 || 
-			palpiteJogador == 4 && palpiteMaquina == 3) {
+	public void palpiteMaquina() {
+		Random random = new Random();
+		this.setPalpiteMaquina(random.nextInt(3));
+	}
+	
+	public void verificaVencedor(int palpiteJogador) {
+		palpiteMaquina();
+		if(	palpiteJogador == 1 && getPalpiteMaquina() == 3 || 
+			palpiteJogador == 3 && getPalpiteMaquina() == 2 || 
+			palpiteJogador == 2 && getPalpiteMaquina() == 1) {
 			
 				jogador.setQtdVitorias(jogador.getQtdVitorias()+1);
-				controlador.setQtdVitoriasJogador(controlador.getQtdVitoriasJogador()+1);
+				controlador.setQtdVitoriasJogador(controlador.getQtdVitoriasJogador()+ 1);
+				System.out.println("Você ganhou da máquina!Seus pontos são" +controlador.getQtdVitoriasJogador() + "X" +controlador.getQtdVitoriasMaquina());
 				
 		}else if (palpiteJogador == palpiteMaquina) {
 			System.out.println("Houve empate! As pontuações permanecem as mesmas");
 		}else {
 			jogador.setQtdDerrotas(jogador.getQtdDerrotas()+1);
 			controlador.setQtdVitoriasMaquina(controlador.getQtdVitoriasMaquina()+1);
-
+			System.out.println("Você perdeu para a máquina! Seus pontos são:" +controlador.getQtdVitoriasJogador() + "X" +controlador.getQtdVitoriasMaquina());
 		}
+		
 	}
 	
 }

@@ -9,8 +9,8 @@ public class Jogador {
 	}
 	
 	public Jogador(int qtdVitorias, int qtdDerrotas) {
-		this.qtdVitorias = 0;
-		this.qtdDerrotas = 0;
+		this.qtdVitorias = qtdVitorias;
+		this.qtdDerrotas = qtdDerrotas;
 	}
 
 	public int getQtdVitorias() {
