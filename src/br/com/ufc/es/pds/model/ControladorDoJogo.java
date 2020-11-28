@@ -3,7 +3,7 @@ package br.com.ufc.es.pds.model;
 public class ControladorDoJogo {
 	private int qtdVitoriasJogador;
 	private int qtdVitoriasMaquina;
-	
+
 	public ControladorDoJogo() {
 		super();
 	}
@@ -28,6 +28,7 @@ public class ControladorDoJogo {
 	public void setQtdVitoriasMaquina(int qtdVitoriasMaquina) {
 		this.qtdVitoriasMaquina = qtdVitoriasMaquina;
 	}
+
 
 	@Override
 	public String toString() {

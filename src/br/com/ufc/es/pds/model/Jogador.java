@@ -16,7 +16,7 @@ public class Jogador {
 	public int getQtdVitorias() {
 		return qtdVitorias;
 	}
-
+	
 	public void setQtdVitorias(int qtdVitorias) {
 		this.qtdVitorias = qtdVitorias;
 	}
@@ -25,10 +25,10 @@ public class Jogador {
 		return qtdDerrotas;
 	}
 
-
 	public void setQtdDerrotas(int qtdDerrotas) {
 		this.qtdDerrotas = qtdDerrotas;
 	}
+
 	
 	@Override
 	public String toString() {

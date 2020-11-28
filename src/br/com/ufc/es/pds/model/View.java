@@ -30,6 +30,7 @@ public class View {
 				case 1: 
 					Jogador jogador = new Jogador(0,0);
 					System.out.println("Seu adversário será a máquina!");
+					System.out.println("Seus pontos no momento são" + jogador.toString());
 					break;
 				case 2:
 					break;
