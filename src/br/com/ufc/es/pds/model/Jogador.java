@@ -32,6 +32,6 @@ public class Jogador {
 	
 	@Override
 	public String toString() {
-		return "Jogador [qtdVitorias=" + qtdVitorias + ", qtdDerrotas=" + qtdDerrotas + "]";
+		return "[qtdVitorias=" + qtdVitorias + ", qtdDerrotas=" + qtdDerrotas + "]";
 	}
 }

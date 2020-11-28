@@ -7,6 +7,7 @@ public class View {
 	Scanner ler = new Scanner(System.in);
 	
 	public void menu() {
+		System.out.println("--------------------------------------------------");
 		System.out.println("Olá, bem vindo ao jogo de pedra, papel ou tesoura!");
 		System.out.println("Digite entre os números 1 e 6 para realizar ações");
 		System.out.println("Digite 1 para começar a jogar");
@@ -14,6 +15,7 @@ public class View {
 		System.out.println("Caso escolheu jogar Digite 1 para escolher pedra");
 		System.out.println("Caso escolheu jogar Digite 2 para escolher papel");
 		System.out.println("Caso escolheu jogar Digite 3 para escolher tesoura");
+		System.out.println("--------------------------------------------------");
 	}
 	
 	public void verificaJogada(int escolhaJogador) {
@@ -55,6 +57,12 @@ public class View {
 						
 						System.out.println("Deseja continuar a jogar? Digite 1 para continar e 2 para sair");
 							int decisaoContinuar = ler.nextInt();
+							while(decisaoContinuar > 2) {
+								System.out.println("Digite um valor válido para continuar ou parar");
+								menu();
+								decisaoContinuar = ler.nextInt();
+							}
+								
 								if(decisaoContinuar == 2) {
 									parar = true;
 									break;
